@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambo&family=Roboto&display=swap');
+
+.combo-font{
+    font-family: 'Cambo', serif;
+  }
+  .roboto-font{
+    font-family: 'Roboto', sans-serif;
+  
+  }
+
+.bg-dark{
+    background-color: #0C0F0A;
+}
+.text-pink{
+    color: #DF0E62;
+}
+.bg-pink{
+    background-color: #DF0E62;
+}
+.text-blue{
+  color: #127681;
+}
+.bg-secondary-light{
+  background-color: #f6f6f6;
+}
+.bg-secondary-dark{
+  background-color: #222222;
+}

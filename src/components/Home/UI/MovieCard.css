@@ -1,0 +1,48 @@
+.movie-card{
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+}
+.movie-card img{
+    border-radius: 8px;
+}
+
+.movie-card .play-icon{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.movie-card .movie-info{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.19);
+    bottom: 0;
+    padding-bottom: 3%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    left: 0;
+    transition: 0.3s all;
+    z-index: 5;
+}
+.movie-card::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.01) 0, rgba(0,0,0, 0.09) 11%, rgba(0,0,0, 0.12) 13%, rgba(0,0,0, 0.19) 20%, rgba(0,0,0, 0.29) 28%, rgba(0,0,0, 0.29) 29%, rgba(0,0,0, 0.42) 38%, rgba(0,0,0, 0.46) 42%, rgba(0,0,0, 0.53) 47%, rgba(0,0,0, 0.75) 69%, rgba(0,0,0, 0.87) 84%, rgba(0,0,0, 0.98) 99%, rgba(0,0,0, 0.94) 100% );
+    transition: 0.3s all;
+    z-index: 3;
+    border-radius: 8px;
+    opacity: 0;
+}
+.movie-card:hover.movie-card::after{
+    opacity: 1;
+}
+.movie-card:hover.movie-card .movie-info {
+    bottom: 3%;
+}

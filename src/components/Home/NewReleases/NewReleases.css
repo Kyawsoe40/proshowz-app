@@ -1,0 +1,22 @@
+.new-releases  .owl-nav{
+    display: none;
+}
+.new-releases .movie-card img{
+    height: 330px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.new-releases .movie-card::after{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.new-releases button{
+    border: 1px solid #127681;
+    width: 100%;
+    color: #127681;
+    background-color: transparent;
+}
+.new-releases button:hover{
+    background-color: #127681;
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+.pagination-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.movies-section .movie-card img{
+    height: 330px;
+    width: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.movies-section .movie-card::after{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.movies-section button{
+    border: 1px solid #127681;
+    width: 100%;
+    color: #127681;
+    background-color: transparent;
+}
+.movies-section button:hover{
+    background-color: #127681;
+    color: #fff;
+}

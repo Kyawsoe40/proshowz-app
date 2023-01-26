@@ -1,0 +1,55 @@
+.carousel-box{
+    position: relative;
+}
+.carousel-box .owl-item{
+    position: relative;
+}
+.carousel-box .owl-item::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    left: 0;
+    top: 0;
+}
+.carousel-box .owl-item img{
+    height: 400px;
+}
+.carousel-box .owl-dots{
+    position: absolute;
+    display: block;
+    width: 100%;
+
+    margin-top: 500px;
+    bottom: 5%;
+}
+.carousel-box .owl-dots .owl-dot span{
+    padding: 1px 20px;
+    background-color: #869791;
+    visibility: hidden;
+    position: relative;
+}
+.carousel-box .owl-dots .owl-dot span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    padding: 3px 20px;
+    border-radius: 3px;
+    background-color: #869791;
+    visibility:visible;
+}
+.carousel-box .owl-dots .owl-dot.active span::after{
+    background-color: #fff;
+}
+.carousel-box .carousel-box-item{
+    position: relative;
+}
+.carousel-box .carousel-box-item .carousel-box-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.carousel-box .carousel-box-item .carousel-box-text .play-icon:hover{
+    background: #DF0E62;
+}
