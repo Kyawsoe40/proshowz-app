@@ -14,7 +14,7 @@ const PopularMovies = ({movies}) => {
         <h2 className={`md:text-3xl text-2xl combo-font font-bold ${isDark?'text-white':'text-black'}`}>Popular Movies</h2>
         <Link className='text-pink md:xtext-xl text-lg font-bold hover:underline' to='movies/popular'>Show all</Link>
     </div>
-    <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:px-2 px-4  grid-cols-1 sm:gap-4 gap-2'>
+    <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 px-2  grid-cols-1 sm:gap-4 gap-2'>
        <MovieCard movie={movies[0]} />
        <MovieCard movie={movies[1]} />
        <MovieCard movie={movies[2]} />

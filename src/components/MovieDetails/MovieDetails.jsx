@@ -1,20 +1,25 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useLayoutEffect, useState } from 'react'
 import { AiFillStar } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router'
 import { api,api_key } from '../api';
 import { ThemeContext } from '../context/ThemeContext';
 import LoadingPage from '../LoadingPage/LoadingPage';
-import { deleteReviews, deleteSelectedMoive, fetchReviews, fetchSimilarMovies, selectedMovie } from '../redux/actions/movies';
+import {  fetchReviews, fetchSimilarMovies, selectedMovie } from '../redux/actions/movies';
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/lib/styles.css';
 import ReviewCard from './ReviewCard';
 import './MovieDetails.css'
+import { Link } from 'react-router-dom';
 
 const MovieDetails = () => {
     const [isLoading,setIsLoading]=useState(true)
+    
     const {movie_id}=useParams();
     const dispatch=useDispatch()
+    useLayoutEffect(()=>{
+      window.scrollTo(0, 0)
+    },[movie_id])
     const navigate=useNavigate()
     const isDark=useContext(ThemeContext)
     const options1 = {
@@ -104,7 +109,7 @@ const MovieDetails = () => {
                 <p className={`${isDark?'text-white':'text-black'}`}>{movie.overview}</p>
                 <ul className='bg-red flex md:gap-2 gap-1 flex-wrap'>
                     {movie.genres.map(genre =>
-                    <li className='rounded md:py-2 py-1 md:px-4 px-3 bg-yellow-300' key={genre.id}>{genre.name}</li>
+                    <Link to={`../../search/genre=${genre.id}`}><li className='rounded md:py-2 py-1 cursor-pointer md:px-4 px-3 bg-yellow-300' key={genre.id}>{genre.name}</li></Link>
                     )}
                 </ul>
                 <p className={`${isDark?'text-white':'text-black'}`}>produced by <span className='text-pink tracking-wide md:text-lg text-base'> 

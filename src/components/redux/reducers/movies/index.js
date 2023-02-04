@@ -7,10 +7,10 @@ const initialState= {
     sectionMovies : [],
     trendMovies: [],
     similarMovies: [],
+    searchMovies: [],
     genres: [],
     movie : {},
     reviews : [],
-    page : 0
 }
 
 export const movieReducer = (state=initialState,{type,payload}) =>{
@@ -39,6 +39,10 @@ export const movieReducer = (state=initialState,{type,payload}) =>{
             ...state,
             similarMovies: payload
         }
+        case ActionTypes.FETCH_SEARCH_MOVIES : return{
+            ...state,
+            searchMovies: payload
+        }
         case ActionTypes.GET_GENRES : return{
             ...state,
             genres: payload
@@ -51,6 +55,14 @@ export const movieReducer = (state=initialState,{type,payload}) =>{
             ...state,
             movie : {}
         }
+        case ActionTypes.DELETE_SECTION_MOVIES : return{
+            ...state,
+            sectionMovies : []
+        }
+        case ActionTypes.DELETE_SEARCH_MOVIES : return{
+            ...state,
+            searchMovies : []
+        }
         case ActionTypes.FETCH_REVIEWS : return{
             ...state,
             reviews : payload
@@ -58,10 +70,6 @@ export const movieReducer = (state=initialState,{type,payload}) =>{
         case ActionTypes.DELETE_REVIEWS : return{
             ...state,
             reviews : []
-        }
-        case ActionTypes.SET_PAGE : return{
-            ...state,
-            page : payload
         }
 
         default : return state

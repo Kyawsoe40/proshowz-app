@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaPlay} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const CarouselImage = ({movie,genres}) => {
   let movieGenres;
@@ -16,7 +17,7 @@ const CarouselImage = ({movie,genres}) => {
           
           <ul className='bg-red flex md:gap-2 gap-1 flex-wrap'>
               {movieGenres.map(genre =>
-                <li className='rounded md:py-2 py-1 md:px-4 px-3 bg-yellow-300' key={genre.id}>{genre.name}</li>
+                <Link key={genre.id} to={`search/genre=${genre.id}`}><li className='rounded md:py-2 py-1 md:px-4 px-3 cursor-pointer bg-yellow-300' key={genre.id}>{genre.name}</li></Link>
               )}
           </ul>
           <h2 className='text-3xl font-bold text-white'>{movie.title}</h2>

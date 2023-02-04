@@ -51,7 +51,7 @@ const NewReleases = ({movies}) => {
             <h2 className={`md:text-3xl text-2xl combo-font font-bold ${isDark?'text-white':'text-black'}`}>New Releases</h2>
             <Link className='text-pink md:text-xl text-lg font-bold hover:underline' to='movies/now_playing'>Show all</Link>
           </div>
-          <div className="lg:px-2 md:px-5 px-2 ">
+          <div className="lg:px-2 px-5">
           <OwlCarousel options={options}  >
           {
             movies.map(movie=>

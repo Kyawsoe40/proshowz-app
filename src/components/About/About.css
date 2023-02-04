@@ -1,0 +1,14 @@
+.number-boxes{
+    border: 1px solid #127681;
+    border-radius: 5px;
+}
+.number-boxes:hover{
+    background: #127681;
+}
+.number-boxes:hover h2{
+    color: #fff;
+}
+.number-boxes h2{
+    transition: all;
+    transition-duration: 500ms;
+}

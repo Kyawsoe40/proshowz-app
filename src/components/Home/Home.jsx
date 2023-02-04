@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -15,7 +15,9 @@ import PopularMovies from './PopularMovies/PopularMovies';
 
 const Home = () => {
     const dispatch=useDispatch();
-
+    useLayoutEffect(()=>{
+      window.scrollTo(0, 0)
+    },[])
     const [isLoading,setIsLoading]=useState(false)
     const getPopularMovies=async ()=>{
         setIsLoading(true)

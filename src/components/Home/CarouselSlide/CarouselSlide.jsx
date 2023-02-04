@@ -12,7 +12,6 @@ const CarouselSlide = ({movies,genres}) => {
         loop:true,
 
     };
-    console.log(movies)
   return (
     movies&&genres?
     <div className='carousel-box py-5'>

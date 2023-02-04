@@ -17,11 +17,11 @@ const CarouselSection = ({movies}) => {
         margin:50,
         responsive : {
           0 : {
-            stagePadding:40,
+            stagePadding:20,
             margin:10
           },
           480 : {
-            stagePadding:80,
+            stagePadding:50,
             margin:20
           },
 

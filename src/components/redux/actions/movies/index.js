@@ -36,6 +36,18 @@ export const fetchSimilarMovies=(movies)=>{
         payload: movies
     }
 }
+export const fetchSearchMovies=(movies)=>{
+    return {
+        type: ActionTypes.FETCH_SEARCH_MOVIES,
+        payload: movies
+    }
+}
+export const deleteSearchMoives=()=>{
+    return {
+        type: ActionTypes.DELETE_SEARCH_MOVIE,
+        payload: []
+    }
+}
 export const GetGenres=(genres)=>{
     return {
         type: ActionTypes.GET_GENRES,
@@ -54,6 +66,12 @@ export const deleteSelectedMoive=()=>{
         payload: {}
     }
 }
+export const deleteSectionMoives=()=>{
+    return {
+        type: ActionTypes.DELETE_SELECTED_MOVIE,
+        payload: []
+    }
+}
 export const fetchReviews=(reviews)=>{
     return {
         type : ActionTypes.FETCH_REVIEWS,
@@ -64,11 +82,5 @@ export const deleteReviews=(reviews)=>{
     return {
         type : ActionTypes.DELETE_REVIEWS,
         payload : []
-    }
-}
-export const setPage=(page)=>{
-    return {
-        type: ActionTypes.SET_PAGE,
-        payload: page
     }
 }
