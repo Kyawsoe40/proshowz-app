@@ -63,7 +63,7 @@ const Header = ({theme,setTheme}) => {
             <ul className='flex justify-evenly items-baseline gap-x-6 gap-y-5 lg:flex-row flex-col'>
                 <li><Link onClick={()=>setIsToggleOn(false)} to="" className={`${isDark?'text-white':'text-black'} roboto-font font-bold lg:text-sm text-lg tracking-wider`}>Home</Link></li>
                 <li><Link onClick={()=>setIsToggleOn(false)} to="about" className={`${isDark?'text-white':'text-black'} roboto-font font-bold lg:text-sm text-lg tracking-wider`}>About</Link></li>
-                <li className='relative'>
+                <li className='relative flex items-center'>
                 <button onClick={()=>{setDropdown1(!dropdown1); setDropdown2(false);}} className={`${isDark?'text-white':'text-black'} roboto-font lg:text-sm text-lg font-bold tracking-wider flex items-center gap-x-1`} >Movies <RiArrowDownSLine /> </button>     
                 <div className={`${dropdown1?'flex':'hidden'} bg-white lg:w-[150px] w-[200px] py-2 absolute top-10 left-0 rounded-md flex-col z-10`} >
                     <Link onClick={linkHandler} to='movies/popular' className={` roboto-font lg:text-sm text-lg font-semibold tracking-wider pl-2 py-1`}>Popular Movies</Link>

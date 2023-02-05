@@ -40,7 +40,7 @@ const Footer = () => {
                             <h2 className='text-white text-2xl font-bold'>{data.title}</h2>
                             <div className="flex flex-col">
                                 {data.items.map((item,index)=>
-                                <Link key={index} className='text-gray-400 text-lg footer-link'>{item}</Link>
+                                <span key={index} className='text-gray-400 text-lg footer-link'>{item}</span>
                                 )}
                             </div>
                         </div>
@@ -59,10 +59,10 @@ const Footer = () => {
         <div className="flex md:flex-row flex-col gap-y-2 py-3 justify-evenly items-center" style={{background:'#222'}}>
             <p className='text-gray-400 md:text-base text-sm'>&copy; 2023 ProShowz.All rights served | Coded by Kyaw Soe Han</p>
             <div className='flex gap-5'>
-                <Link className='footer-icons'><FaFacebookF /></Link>
+                <a href='https://www.facebook.com/spyblue61/' target='_blank' className='footer-icons'><FaFacebookF /></a>
                 <Link className='footer-icons'><FaTwitter /></Link>
                 <Link className='footer-icons'><FaInstagram /></Link>
-                <Link className='footer-icons'><FaGithub /></Link>
+                <a href='https://github.com/Kyawsoe40' target='_blank' className='footer-icons'><FaGithub /></a>
             </div>
         </div>
     </div>):''

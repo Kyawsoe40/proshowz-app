@@ -114,7 +114,7 @@ const SearchResults = () => {
     isLoading? (<LoadingPage />) :
     (
         <div style={{paddingTop:'200px'}}>
-        <div className="flex items-center justify-center gap-1">
+        <div className="flex items-center justify-center gap-1 px-1">
             <Select 
                 defaultValue={defaultOptions}
                 onChange={setSelectedOption}
