@@ -1,4 +1,4 @@
-
+import React from 'react'
 import './CarouselSection.css'
 import {FaPlay} from 'react-icons/fa'
 const CarouselImage = ({movie}) => {

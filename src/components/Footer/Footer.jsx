@@ -1,5 +1,6 @@
-import './Footer.css'
 import React from 'react'
+import './Footer.css'
+
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { BsEnvelope } from 'react-icons/bs'
